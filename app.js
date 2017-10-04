@@ -32,7 +32,7 @@ function isValidCard(number){
 			sum += parseInt(number[i])*2
 		}		
 		else{
-			sum += parseInt(number[i]) //de lo contrario se conserva el mismo
+			sum += parseInt(number[i]) //de lo contrario se conserva el mismo	
 		}
 	}
 	if(sum%10 == 0){
