@@ -20,7 +20,7 @@ function validateNumber(userTarjeta){
 	return valit;
 }
 
-/* funcion pedida en ejercicio 2 para ver si la tarjeta es valida, utilizar logaritmo
+/* funcion pedida en ejercicio 2 para ver si la tarjeta es valida, utilizar algoritmo de 
 luhn */
 function isValidCard(number){
 	var sum = 0;
