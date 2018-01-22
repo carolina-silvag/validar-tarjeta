@@ -8,15 +8,15 @@ isValidCard(validateNumber(userTarjeta));
 function validateNumber(userTarjeta) {
   var valit = [];
   var numberTarjeta = userTarjeta.split('').reverse().join(''); 
-  console.log(numberTarjeta);
   var number = '0123456789';
   if (numberTarjeta.length === 0) {             
     return validateNumber(prompt('Ingrese numeros validos')); 
   }
-  for (var i = 0; i < numberTarjeta.length; i++) {     
+  for (var i = 0; i < numberTarjeta.length; i++) {
     if (number.indexOf(numberTarjeta[i]) === -1) { 
-      valit.push(numberTarjeta[i]); 
       return validateNumber(prompt('Ingrese numeros validos'));
+    } else {
+      valit.push(numberTarjeta[i]); 
     } 
   }
   return valit;
@@ -35,7 +35,7 @@ function isValidCard(number) {
       sum += parseInt(number[i]); 
     }
   }
-  if (sum % 10 === 0) {             
+  if (sum % 10 === 0) { 
     return alert('Tarjeta Valida');
   } else {                       
     alert('Tarjeta Invalida');
